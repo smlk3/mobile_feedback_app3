@@ -44,6 +44,7 @@ export default function App() {
     }
   };
 
+
   return (
     <ImageBackground source={require('./assets/background.png')} style={styles.background}>
       <SafeAreaView style={styles.safeArea}>
@@ -51,6 +52,7 @@ export default function App() {
           <Text style={styles.header}>Hastane Geri Bildirim Uygulaması v1.0</Text>
         </View>
         <View style={styles.contentBox}>
+          {/* Geri bildirim alanları */}
           <Text style={styles.label}>Geri Bildiriminizi Yazın</Text>
           <TextInput
             style={styles.textInput}
@@ -75,7 +77,7 @@ export default function App() {
           </View>
 
           <TextInput
-            style={styles.textInput2}
+            style={styles.textInput}
             placeholder={
               contactMethod === 'email'
                 ? 'E-posta adresinizi girin'
@@ -136,15 +138,6 @@ const styles = StyleSheet.create({
   },
   label: { fontSize: 16, marginTop: 16, marginBottom: 8, fontWeight: 'bold' },
   textInput: {
-    borderWidth: 1,
-    borderColor: '#888',
-    borderRadius: 6,
-    padding: 12,
-    marginBottom: 12,
-    minHeight: 120,
-    backgroundColor: 'rgba(255,255,255,0.95)',
-  },
-  textInput2: {
     borderWidth: 1,
     borderColor: '#888',
     borderRadius: 6,
